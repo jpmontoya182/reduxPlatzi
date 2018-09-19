@@ -19,8 +19,8 @@ class Media extends PureComponent {
                         height={160}
                         className="Media-image"
                     />
-                    <h3 className="Media-title">{this.props.title}</h3>
-                    <p className="Media-author">{this.props.author}</p>
+                    <h3 className="Media-title">{this.title}</h3>
+                    <p className="Media-author">{this.author}</p>
                 </div>
             </div>
         )
