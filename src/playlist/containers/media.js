@@ -4,13 +4,18 @@ import { connect } from 'react-redux'
 
 class MediaContainer extends Component {    
     render () {
-        return <Media {...this.props.data} />
+        return <Media 
+            title={item.get('title')} 
+            author={item.get('author')} 
+            cover={item.get('cover')}  
+            key={item.get('id')}
+        />
     }    
 }
 
 function mapStateToProps(state, props){
     return {
-        data : state.data.entities.media[props.id]
+        data : state.getIn(['data','entities','media',props.id])
     }
 }
 
